@@ -9,13 +9,13 @@ import javax.imageio.ImageIO;
 public class Balas {
     int x, y, w = 6, h = 14;
     int velo = 10;
-    private BufferedImage sprite; // Imagen opcional
+    private BufferedImage sprite; 
 
 
     public Balas(int x, int y) {
         this.x = x;
         this.y = y;
-        cargarImagen("/imagen/bala.png"); // ruta de la imagen
+        cargarImagen("/imagen/bala.png"); 
 
     }
     private void cargarImagen(String path) {
