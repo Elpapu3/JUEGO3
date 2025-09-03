@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage;
 public class Balas_enemigo {
     int x, y, w = 10, h = 20;
     int velo = 5;
-    private BufferedImage sprite; // Imagen opcional
+    private BufferedImage sprite; // Imagen
 
 
     public Balas_enemigo(int x, int y) {
         this.x = x;
         this.y = y;
-        cargarImagen("/imagen/bome.png"); // ruta de la imagen
+        cargarImagen("/imagen/bome.png"); 
 
     }
 
