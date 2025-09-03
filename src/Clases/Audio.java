@@ -16,7 +16,6 @@ public class Audio {
         }
     }
 
-    // Reproduce una vez
     public void play() {
         if (clip != null) {
             clip.stop();
@@ -24,16 +23,13 @@ public class Audio {
             clip.start();
         }
     }
-
-    // Reproduce en loop infinito
     public void loop() {
         if (clip != null) {
             clip.loop(Clip.LOOP_CONTINUOUSLY);
         }
     }
     
-    // Nuevo método: ajustar volumen
-    // valor de - 80 (muy bajo) a 6 (muy alto)
+    // LE AGREGUE EL METODO ESTE PARA AJUSTAR LE VOLUMEN
     public void setVolume(float decibeles) {
         if (clip != null) {
             FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
