@@ -19,7 +19,6 @@ public class Jugador {
         cargarImagen("/imagen/P1.png"); // Ruta de la imagen
     }
 
-    /** Carga la imagen desde la carpeta "imagen" */
     private void cargarImagen(String ruta) {
         try {
             sprite = ImageIO.read(getClass().getResource(ruta));
@@ -29,22 +28,18 @@ public class Jugador {
         }
     }
 
-    /** Movimiento manual */
     public void mover(int dx, int anchoPantalla) {
         x += dx;
         if (x < 0) x = 0;
         if (x > anchoPantalla - w) x = anchoPantalla - w;
     }
 
-    /** Dibuja la nave */
     public void draw(Graphics2D g2) {
         if (sprite != null) {
             g2.drawImage(sprite, x, y, w, h, null);
         }
-        // si sprite es null, no dibuja nada
     }
 
-    /** Limites de colisión */
     public Rectangle getBounds() {
         return new Rectangle(x, y, w, h);
     }
