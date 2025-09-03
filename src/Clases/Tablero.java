@@ -135,12 +135,17 @@ public class Tablero extends JPanel implements ActionListener {
                 int posx = startX + j * sepX;
                 int posY = startY  + i * sepY;
                 
-                if (nivel == 2 && Math.random()< 0.2) {
+                if (nivel == 1 && Math.random()< 0.2) {
                 	ene.add(new Ene(posx, posY, 80, 50, "/imagen/ene2.png", 2, 2));
-                }else if (nivel == 3 && Math.random()< 0.2){
+                }else if (nivel == 2 && Math.random()< 0.2) {
+                	ene.add(new Ene(posx, posY, 80, 50, "/imagen/ene2.png", 2, 2));
+                }else if (nivel == 2 && Math.random()< 0.1){
+                	ene.add(new Ene(posx, posY, 80, 50, "/imagen/kami.png", 1,3));	
+                }else if (nivel == 3 && Math.random()< 0.1){
                 	ene.add(new Ene(posx, posY, 80, 50, "/imagen/kami.png", 1,3));
-
-                }else if (nivel == 4 && Math.random()< 0.2){
+                }else if (nivel == 3 && Math.random()< 0.2) {
+                	ene.add(new Ene(posx, posY, 80, 50, "/imagen/ene2.png", 2, 2));
+                }else if (nivel == 3 && Math.random()< 0.1){
                 	ene.add(new Ene(posx, posY, 80, 50, "/imagen/kami2.png", 1,4));
 
                 }else {
@@ -149,7 +154,7 @@ public class Tablero extends JPanel implements ActionListener {
             }
         }
         //velocidad del enemigo 
-        eneVelo = 2 + nivel;
+        eneVelo = nivel;
     }
         
 
